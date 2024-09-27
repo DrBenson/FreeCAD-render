@@ -43,7 +43,7 @@ class RenderWorkbench(Gui.Workbench):
         except AttributeError:
             translate = lambda _, x: x
 
-        self.__class__.MenuText = "Render"
+        self.__class__.MenuText = translate("Workbench", "Render")
         self.__class__.ToolTip = translate(
             "Workbench",
             "The Render workbench is a modern replacement for "
@@ -135,7 +135,7 @@ static char * Render_xpm[] = {
             QT_TRANSLATE_NOOP("Workbench", "&Render"), RENDER_COMMANDS
         )
         addIconPath(ICONDIR)
-        addPreferencePage(PreferencesPage, "Render")
+        addPreferencePage(PreferencesPage, QT_TRANSLATE_NOOP("Workbench", "Render"))
         msg = translate("Workbench", "Loading Render module... done") + "\n"
         Console.PrintLog(msg)
 
